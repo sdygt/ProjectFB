@@ -12,23 +12,32 @@
 </head>
 <body>
     <div class="container">
-
-        <form class="form-signin" method="POST" action="{:U('Index/handleLogin')}">
-            <h2>校科协脸谱后台管理<small>βeta</small></h2>
-            <!-- <p> -->
-                <label for="" class="sr-only">用户名</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="用户名" required/>
-            <!-- </p> -->
-
-            <!-- <p> -->
-                <label for="" class="sr-only">密码</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="密码" required/>
-            <!-- </p> -->
-
-            <button class="btn btn-lg btn-primary btn-block" type="submit"/>登录</button>
+        <form class="form-signin" id="form" method="POST" action="{:U('Index/handleLogin')}">
+            <h2>校科协脸谱后台管理<small>αlρhα</small></h2>
+            <input type="text" name="name" id="name" class="form-control" placeholder="用户名" required/>
+            <input type="password" name="password" id="password" class="form-control" placeholder="密码" required/>
+            <input class="btn btn-lg btn-primary btn-block" id="btnLogin" type="button" value="登录"/>
         </form>
     </div>
     <script src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
     <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $("#btnLogin").click(function(){
+        $("#btnLogin").addClass("disabled");
+        $("#btnLogin").val("正在登录……");
+        var name = $("#name").val();
+        var password = $("#password").val();
+        $.post("{:U('Index/handleLogin')}",{"name":name,"password":password},function(back){
+            if (back.status == 0) {
+                $("#btnLogin").val("正在跳转……");
+                window.location.href="{:U('Index/view')}";
+            }else{
+                $("#btnLogin").removeClass("disabled");
+                $("#btnLogin").val("用户名或密码错误，请重试");
+                $("#form").addClass("has-error has-feedback");
+            };
+        });
+    });
+    </script>
 </body>
 </html>

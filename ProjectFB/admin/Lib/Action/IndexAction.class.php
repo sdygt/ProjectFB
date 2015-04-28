@@ -1,6 +1,4 @@
 <?php
-// 本类由系统自动生成，仅供测试用途
-//mysql> select `name` from fb_department where id=(select `department` from fb_member where id=5);
 class IndexAction extends Action 
 {
 	public function index()
@@ -13,7 +11,7 @@ class IndexAction extends Action
 		//view操作方法逻辑的实现
 		if (!isset($_SESSION['loggeduser'])) 
 		{
-			$this->error('请先登录！',U('Index/index'));
+			$this->redirect('Index/index');
 		}
 
 		$view_user = M('member');
@@ -24,21 +22,23 @@ class IndexAction extends Action
 
 	public function handleLogin()
 	{
-		if (!IS_POST) {
+		if (!IS_AJAX) {
 			$this->error('非法操作！',U('Index/index'));
 		}
 
 		$data = M('account');
 		$password = $data->where('name="'.I('POST.name').'"')->getField('password');
 		
-		if ((password_verify(I('POST.password'),$password)))
+		if ((password_verify(I('POST.password'),$password)))//need PHP 5.5+
 		{
 			session('loggeduser',I('POST.name'));
-			$this->redirect('Index/view');
+			//$this->redirect('Index/view');
+			$this->ajaxReturn(array('status' => 0));//success
 		}
 		else
 		{
-			$this->error('用户名或密码错误！', U('Index/index'));
+			// $this->error('用户名或密码错误！', U('Index/index'));
+			$this->ajaxReturn(array('status' => 1));//fail
 		}
 
 	}
@@ -90,11 +90,11 @@ class IndexAction extends Action
 		$members = M("member"); 
 		if ($members->where('id='.$id)->delete())//删记录
 		{
-			$this->ajaxReturn(array('status' => 0));
+			$this->ajaxReturn(array('status' => 0));//success
 		}
 		else
 		{
-			$this->ajaxReturn(array('status' => 1));
+			$this->ajaxReturn(array('status' => 1));//fail
 		}
 
 		
@@ -187,7 +187,7 @@ class IndexAction extends Action
 			$member->where('id='.$_POST['id'])->save($_POST); // 写入用户数据到数据库
 		}
 
-		$this->success('数据保存成功！','__PUBLIC__/clsWin.html?id='.rand());
+		$this->success('数据保存成功！','__PUBLIC__/clsWin.html?id='.rand());//莫名其妙的缓存问题……
 	}
 
 }

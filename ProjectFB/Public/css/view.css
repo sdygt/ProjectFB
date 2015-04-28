@@ -3,5 +3,28 @@ body {
 }
 
 .welcome{
-	float:right;
+	margin-right: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.container{
+	min-width: 550px;
+}
+
+table{
+	table-layout: fixed;
+}
+
+td{
+	word-break: break-all;
+	word-wrap:break-word;
+}
+
+th{
+	text-align: center;
+}
+
+tr{
+	text-align: center;
 }
