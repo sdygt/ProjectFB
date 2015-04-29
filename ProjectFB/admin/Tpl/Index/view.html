@@ -5,8 +5,9 @@
 	<title>校科协脸谱|后台管理</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="__PUBLIC__/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap/bootstrap.min.css" >
 	<link rel="stylesheet" href="__PUBLIC__/css/view.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="__PUBLIC__/css/magnific-popup.css" />
 </head>
 <body>
 	<p class="navbar-text navbar-right welcome">欢迎您，{:session('loggeduser')}  <a href="{:U('Index/logout')}">登出</a></p>
@@ -30,33 +31,16 @@
 					<td width="10%">{$vo.year}</td>
 					<td width="15%">{$vo.department|queryDept}</td>
 					<td>{$vo.introduce}</td>
-					<td width="80px"><a class="btn btn-primary" role="button" href="javascript:void(0)" onclick="window.open('__URL__/edit?id={$vo.id}', 'newwindow', 'height=500, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')">编辑</a></td>
+					<!-- <td width="80px"><a class="btn btn-primary btnEdit" role="button" href="javascript:void(0)" onclick="window.open('__URL__/edit?id={$vo.id}', 'newwindow', 'height=500, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')">编辑</a></td> -->
+					<td width="80px"><a class="btn btn-primary btnEdit popup-with-form" role="button" href="__URL__/edit?id={$vo.id}">编辑</a></td>
 					<td width="80px"><a class="btn btn-danger" role="button" href="javascript:void(0)" onclick="del({$vo.id})">删除</a></td>
 				</tr>
 			</volist>
 		</table>
-	</div>	
-	<script type="text/javascript">
-	function del (id)
-	{
-		question = confirm("你确认要删除此条记录吗？");
-		if (question){
-			$.post("{:U('Index/delete')}",{"id":id},
-				function (back) {
-					if (back.status == 0) 
-					{
-						alert("删除成功！")
-					$("#trid-"+id).remove();//在html中移除对应项
-				} 
-				else
-				{
-					alert("删除失败！")
-					location.reload();
-				};
-			}	)
-		}
-	}
-	</script>
+	</div>
+
 	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.2.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/view.js" ></script>
 </body>
 </html>

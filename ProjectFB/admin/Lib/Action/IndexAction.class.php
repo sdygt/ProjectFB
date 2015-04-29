@@ -187,7 +187,7 @@ class IndexAction extends Action
 			$member->where('id='.$_POST['id'])->save($_POST); // 写入用户数据到数据库
 		}
 
-		$this->success('数据保存成功！','__PUBLIC__/clsWin.html?id='.rand());//莫名其妙的缓存问题……
+		$this->success('数据保存成功！','__PUBLIC__/clsWin.html');
 	}
 
 }

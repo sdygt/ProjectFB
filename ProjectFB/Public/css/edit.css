@@ -4,3 +4,12 @@
 	font-size: 50%;
 	color: #888;
 }
+
+body {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
