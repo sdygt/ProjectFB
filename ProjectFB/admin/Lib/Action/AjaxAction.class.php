@@ -13,11 +13,11 @@ class AjaxAction extends Action
             $this->ajaxReturn($this->member($id));
         } elseif (isset($_GET['year'])) {
             $year = $_GET['year'];
-            $dept = $_GET['department'];
-            $this->ajaxReturn($this->year($year, $dept));
+            $dept_id = $_GET['department'];
+            $this->ajaxReturn($this->year($year, $dept_id));
         } elseif (isset($_GET['department'])) {
-            $dept = $_GET['department'];
-            $this->ajaxReturn($this->dept($dept));
+            $dept_id = $_GET['department'];
+            $this->ajaxReturn($this->dept($dept_id));
         } else {
             echo "Wrong parameter!";
         }
@@ -32,10 +32,10 @@ class AjaxAction extends Action
         return $member; //返回数组
     }
 
-    private function year($year, $dept) //获取指定年&&指定部门的所有人的列表
+    private function year($year, $dept_id) //获取指定年&&指定部门的所有人的列表
 
     {
-        $dept_id = M('department')->where("name='" . $dept . "'")->getField('id'); //获得部门名称对应ID
+        // $dept_id = M('department')->where("name='" . $dept . "'")->getField('id'); //获得部门名称对应ID
         if ($year === 'latest') {
             $year = M('member')->where('department=' . $dept_id)->max('year');
             $year = (int) $year;
@@ -46,7 +46,6 @@ class AjaxAction extends Action
         $result = array();
         $i = 0;
         foreach ($members as $key => $value) {
-            // echo "key=".$key.",value=".$value;
             $result[$i]['id'] = $key;
             $result[$i]['imgurl'] = $value;
             $i++;
@@ -54,10 +53,10 @@ class AjaxAction extends Action
         return $result;
     }
 
-    private function dept($dept) //获取指定部门的所有的有数据的年份
+    private function dept($dept_id) //获取指定部门的所有的有数据的年份
 
     {
-        $dept_id = M('department')->where("name='" . $dept . "'")->getField('id'); //获得部门名称对应ID
+        // $dept_id = M('department')->where("name='" . $dept . "'")->getField('id'); //获得部门名称对应ID
         $dept_id = (int) $dept_id;
         $years = M('member')->Distinct(true)->order('year desc')->where("department=" . $dept_id)->getField('year', true);
         foreach ($years as &$value) {
