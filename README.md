@@ -15,7 +15,20 @@
 
 *  上线之前记得清下数据库然后把调试开关关掉……
 
-## TODO
+## 授权协议
 
-*  20150524:上回思路有点滚乱，后台主页单入口名字还是不改了，处理前端ajax的单入口就叫ajax好了www
+*  本程序遵循Apache2开源协议发布，并提供免费使用。<small>虽然还是希望能给两位作者投食www</small>
 
+  Copyright 2015  sdygt & Racheluxe
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   <http://www.apache.org/licenses/LICENSE-2.0>
+
+  Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
