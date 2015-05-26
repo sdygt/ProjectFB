@@ -83,7 +83,6 @@ html,body{
 .outer3{
 	width: 128px;height: 323px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
-	cursor: pointer;
 }
 /*三层旋转制作六边形*/
 .first{

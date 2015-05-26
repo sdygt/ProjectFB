@@ -133,7 +133,11 @@ function coverhide(){
 function showrwxq(){
 	$("#rwxiangqing").css("display","inline");
 	$("#bmlistkuang").css("opacity","0.7");
-	$("#rw10").unbind("click");
+	$(".hexagonrw").unbind("click");
+}
+function hiderwxq(){
+	$("#rwxiangqing").css("display","none");
+	$(".hexagonrw").unbind("click");
 }
 function covershow(){
 	$("#hexagon0").unbind("click");
@@ -167,7 +171,7 @@ function listshow(that){
 		},
 		800
 		);
-	$.get('./admin.php/Ajax/ajax?department=' + bmid)
+	$.get('./admin.php/Ajax/ajax?department=' + bmid )
 	/*这里首先先获取所点击的是哪个部门，然后发送两个ajax请求，
 	一个发送部门代号后获取这个部门哪些年份有数据，将它们列在右边的栏目里面，
 	另一个请求这个部门最新一年的人物列表，以及每个人物对应的代号、图片url等，将它们呈现在左边*/
@@ -193,6 +197,9 @@ function listshow(that){
 		});
 	};
 }
+
+
+
 	$(".hexagon").bind("click",function(){ 
 		var that = this;
 		listshow(that);
@@ -203,7 +210,9 @@ function listshow(that){
 	$(".hexagonrw").live("click",function(){
 		showrwxq();
 	} );
-
+	$('#rwxiangqing').bind("click",function(){ 
+		hiderwxq();
+	})
 
 	
 </script>
