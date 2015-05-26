@@ -129,12 +129,12 @@ visibility: visible;
 #hexagon7{position: absolute;left: -279px;right: 0;top: 0;bottom: 246px;margin: auto;}
 #hexagon8{position: absolute;left: 279px;right: 0;top: 78px;bottom: 0;margin: auto;}
 #hexagon9{position: absolute;left: 279px;right: 0;top: 0;bottom: 246px;margin: auto;}
-#rwfy1{position: absolute;top: 70px;right: 745px;width: 134px;height: 50px;}
-#rwfy2{position: absolute;top: 125px;right: 745px;width: 134px;height: 50px;}
-#rwfy3{position: absolute;top: 180px;right: 745px;width: 134px;height: 50px;}
-#rwfy4{position: absolute;top: 235px;right: 745px;width: 134px;height: 50px;}
-#rwfy5{position: absolute;top: 290px;right: 745px;width: 134px;height: 50px;}
-#rwfy6{position: absolute;top: 345px;right: 745px;width: 134px;height: 50px;}
+#rwfy1{position: absolute;top: 70px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
+#rwfy2{position: absolute;top: 125px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
+#rwfy3{position: absolute;top: 180px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
+#rwfy4{position: absolute;top: 235px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
+#rwfy5{position: absolute;top: 290px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
+#rwfy6{position: absolute;top: 345px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
 .rw{position: absolute;;left: -600px;right: 0px;top: 120px;bottom: -120px;margin: auto;}
 
 #rwxiangqing{
@@ -160,4 +160,9 @@ visibility: visible;
 	width: 200px;
 	height: 150px;
 	overflow: hidden;
+}
+.yeartext{             
+ 	font-size:25px;  
+	font-family: "Microsoft YaHei" ! important;  
+	color: white;          
 }
