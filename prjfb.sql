@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-05-26 16:51:48
+-- Generation Time: 2015-05-27 17:52:44
 -- 服务器版本： 5.6.20
 -- PHP Version: 5.6.3
 
@@ -35,6 +35,11 @@ CREATE TABLE IF NOT EXISTS `fb_account` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
+-- 插入之前先把表清空（truncate） `fb_account`
+--
+
+TRUNCATE TABLE `fb_account`;
+--
 -- 转存表中的数据 `fb_account`
 --
 
@@ -55,6 +60,11 @@ CREATE TABLE IF NOT EXISTS `fb_department` (
   `introduce` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- 插入之前先把表清空（truncate） `fb_department`
+--
+
+TRUNCATE TABLE `fb_department`;
 --
 -- 转存表中的数据 `fb_department`
 --
@@ -86,6 +96,11 @@ CREATE TABLE IF NOT EXISTS `fb_member` (
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 --
+-- 插入之前先把表清空（truncate） `fb_member`
+--
+
+TRUNCATE TABLE `fb_member`;
+--
 -- 转存表中的数据 `fb_member`
 --
 
@@ -108,19 +123,19 @@ INSERT INTO `fb_member` (`id`, `name`, `year`, `imgurl`, `department`, `introduc
 -- Indexes for table `fb_account`
 --
 ALTER TABLE `fb_account`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `fb_department`
 --
 ALTER TABLE `fb_department`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `fb_member`
 --
 ALTER TABLE `fb_member`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
