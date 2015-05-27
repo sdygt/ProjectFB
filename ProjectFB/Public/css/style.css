@@ -162,7 +162,8 @@ visibility: visible;
 	overflow: hidden;
 }
 .yeartext{             
- 	font-size:25px;  
-	font-family: "Microsoft YaHei" ! important;  
-	color: white;          
+ 	font-size:23px;  
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    color: #ffffff;
+	       
 }
