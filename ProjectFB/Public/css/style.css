@@ -116,6 +116,22 @@ visibility: visible;
 	-webkit-transform:rotate(-30deg); /* Safari 和 Chrome */
 	-o-transform:rotate(-30deg); 	/* Opera */
 }
+.inner1{width: 116px;height: 116px;background-size: cover;
+	position: absolute;left: -7px;top: 0px;bottom: 0;margin: auto;
+	transform:rotate(-30deg);
+	-ms-transform:rotate(-30deg); 	/* IE 9 */
+	-moz-transform:rotate(-30deg); 	/* Firefox */
+	-webkit-transform:rotate(-30deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-30deg); 	/* Opera */
+}
+.inner2{width: 150px;height: 150px;background-size: cover;
+	position: absolute;left: -10px;top: 0px;bottom: 0;margin: auto;
+	transform:rotate(-30deg);
+	-ms-transform:rotate(-30deg); 	/* IE 9 */
+	-moz-transform:rotate(-30deg); 	/* Firefox */
+	-webkit-transform:rotate(-30deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-30deg); 	/* Opera */
+}
 .liu{position: absolute;left: 0px;right: 0;top: 0;bottom: 0;margin: auto;}
 #hexagon0{position: absolute;left: 0px;right: 0;top: 0;bottom: 85px;margin: auto;width: 200px;height: 150px;
 	margin: auto;
@@ -159,11 +175,28 @@ visibility: visible;
 	margin: auto;
 	width: 200px;
 	height: 150px;
-	overflow: hidden;
 }
 .yeartext{             
  	font-size:23px;  
     font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
     color: #ffffff;
 	       
+}
+.yearlist{cursor: pointer;}
+.rwname{
+	position: relative;
+	text-align:center;
+	top: -45px;
+	color: #ffffff;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	font-size: 26px;
+}
+.rwintro{
+	position: relative;
+	left: 230px;
+	color: #ffffff;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	font-size: 17px;
+	width: 320px;
+	top: 20px;
 }
