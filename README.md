@@ -5,7 +5,7 @@
 
 ## 测试说明
 
-*  需要在./ProjectFB/admin/Conf/config.php中填入数据库的配置信息
+*  需要将./ProjectFB/admin/Conf/config.sample.php原地复制一份为config.php，并在其中填入数据库的配置信息
 
 *  然后向数据库导入./prjfb.sql
 
