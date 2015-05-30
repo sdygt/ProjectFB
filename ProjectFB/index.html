@@ -265,7 +265,7 @@ function yearclick(year){
 	});
 }
 	var nowDepartment;
-	$(".hexagon").bind("click",function(){ 
+	$(".hexagon.inner").bind("click",function(){ 
 		var bmid = $(this).attr('id').substr(7);
 		nowDepartment = bmid;
 		listshow(bmid);
