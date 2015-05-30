@@ -25,52 +25,55 @@
 			<div id="bmlistkuang">
 				<div  id="hexagon0">
 				<div class="outer first liu" ><div  class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url(./Public/img/sast.png)"></div>
+					<div class="inner" style="background-image:url()">
+						<img id="sast" src="./Public/img/sast.png">
+					</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon1">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">主席团</div>
 				</div></div></div>
+
 				</div>
 				<div class="hexagon" id="hexagon2">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">计算机部</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon3">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">电子部</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon4">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">网络部</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon5">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">办公室</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon6">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">科宣部</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon7">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">外联部</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon8">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">社团发展部</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon9">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" style="background-image:url()"></div>
+					<div class="inner" style="background-image:url()">SAST工作室</div>
 				</div></div></div>
 				</div>
 
@@ -265,6 +268,7 @@ function yearclick(year){
 	$(".hexagon").bind("click",function(){ 
 		var bmid = $(this).attr('id').substr(7);
 		nowDepartment = bmid;
+		alert(nowDepartment);
 		listshow(bmid);
 	});
 	$("#xiaokuang").bind("click",function(){
