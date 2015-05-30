@@ -73,6 +73,7 @@
 					<div class="inner" style="background-image:url()"></div>
 				</div></div></div>
 				</div>
+
 		</div>
 		<div id="rwlistkuang">
 				<div id="rwkuang" style="background-image:url(./Public/img/rwkuang.png)">
@@ -86,6 +87,7 @@
 					<div id="rwfy6" style="background-image:url(./Public/img/rwfy.png)"></div>
 
 				</div>
+					<div id="return" style="background-image:url(./Public/img/return.png)"></div>
 				<div id="people">
 					<div  class="hexagonrw rw" id="rw1">
 					<div class="outer1 first liu"><div  class="outer1 second liu" ><div class="outer1 third liu" >
@@ -100,7 +102,7 @@
 				<div class="inner2" style="background-image:url(./Public/img/sast.png)"></div>
 			</div></div>
 			</div>
-			<div class="rwintro">方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅方师傅</div>
+			<div class="rwintro">方傅</div>
 			<div class="rwname">方师傅</div>
 			</div>
 
@@ -138,17 +140,21 @@ function coverhide(){
 }
 function showrwxq(rwid){
 	$(".hexagonrw").unbind("click");
-	$.get("./admin.php/Ajax/ajax?member=" + rwid,function(back){
+	$.get("./admin.php/Ajax/ajax?member=" + rwid ,function(back){
+		var arr = back;
 		console.log(back); 
-		var back = {name : "顾怡" , imgurl : "http://img0.imgtn.bdimg.com/it/u=3788730472,3084256332&fm=23&gp=0.jpg", introduce : "顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介顾怡简介"};
+		
 		$("#rwxiangqing").css("display","inline");
-		$("#bmlistkuang").css("opacity","0.7");
+		$("#bmlistkuang").css("opacity","0.5");
 		$("#rwxiangqing .inner2").css("background-image",'url("'+back.imgurl+'")');
+		$("#hexagonrw").empty();
+		$("#hexagonrw").append('<div class="outer3 first liu" ><div  class="outer3 second liu" ><div class="outer3 third liu" ><div class="inner2" style="background-image:url(./upload/'+ arr["imgurl"] +')"></div></div></div></div><div class="rwintro">'+arr["introduce"]+'</div><div class="rwname">'+arr["name"]+'</div>');
 		//还要将姓名和简介插入其中，另外写样式
 	});
 }
 function hiderwxq(){
 	$("#rwxiangqing").css("display","none");
+	$("#bmlistkuang").css("opacity","1");
 	$(".hexagonrw").unbind("click");
 }
 function covershow(){
@@ -174,8 +180,16 @@ function covershow(){
 		1200,
 		'linear');
 }
+function returnlist(){
+	$("#bmlist").animate(
+		{
+			'top':'0px',
+		},
+		800
+		);
+	
+}
 function listshow(bmid){
-	$(".hexagon").unbind("click");
 	$("#bmlist").animate(
 		{
 			'top':'-511px',
@@ -187,17 +201,13 @@ function listshow(bmid){
 		一个发送部门代号后获取这个部门哪些年份有数据，将它们列在右边的栏目里面，
 		另一个请求这个部门最新一年的人物列表，以及每个人物对应的代号、图片url等，将它们呈现在左边*/
 		//我在这里假设我请求得到了14个人物
-		var arr = [
-			{id : 1, imgurl : 'http://img0.imgtn.bdimg.com/it/u=3788730472,3084256332&fm=23&gp=0.jpg'},
-			{id : 2, imgurl : 'http://img1.imgtn.bdimg.com/it/u=2073683288,3382595895&fm=23&gp=0.jpg'},
-			{id : 3, imgurl : 'http://img1.imgtn.bdimg.com/it/u=1397941271,978859856&fm=23&gp=0.jpg'},
-		]
+		var arr = back;
 		var num = arr.length;
 		$("#people").empty();
 		for (var i = 0; i < num; i++) {
 			var content = '<div  class="hexagonrw rw" id="rw'+ arr[i]["id"] +'">'+
 						'<div class="outer1 first liu"><div  class="outer1 second liu" ><div class="outer1 third liu" >'+
-							'<div class="inner1" style="background-image:url('+ arr[i]["imgurl"] +')"></div>'+
+							'<div class="inner1" style="background-image:url(./upload/'+ arr[i]["imgurl"] +')"></div>'+
 						'</div></div></div>'+
 						'</div>';
 			$("#people").append(content);
@@ -214,7 +224,7 @@ function listshow(bmid){
 		};
 	});
 	$.get('./admin.php/Ajax/ajax?department=' + bmid ,function(back){
-		var arr = [2002,2003,2004,2005,2006];
+		var arr = back;
 		$("#rwkuang").empty();
 		for (var i = 0, len = arr.length; i < len; i++) {
 			$("#rwkuang").append('<div id="rwfy'+(i + 1)+'" class="yearlist" style="background-image:url(./Public/img/rwfy.png)"><span class="yeartext">'+arr[i]+'</span></div>');
@@ -228,17 +238,13 @@ function yearclick(year){
 		一个发送部门代号后获取这个部门哪些年份有数据，将它们列在右边的栏目里面，
 		另一个请求这个部门最新一年的人物列表，以及每个人物对应的代号、图片url等，将它们呈现在左边*/
 		//我在这里假设我请求得到了14个人物
-		var arr = [
-			{id : 1, imgurl : 'http://img0.imgtn.bdimg.com/it/u=3788730472,3084256332&fm=23&gp=0.jpg'},
-			{id : 2, imgurl : 'http://img1.imgtn.bdimg.com/it/u=2073683288,3382595895&fm=23&gp=0.jpg'},
-			{id : 3, imgurl : 'http://img1.imgtn.bdimg.com/it/u=1397941271,978859856&fm=23&gp=0.jpg'},
-		]
+		var arr = back;
 		var num = arr.length;
 		$("#people").empty();
 		for (var i = 0; i < num; i++) {
 			var content = '<div  class="hexagonrw rw" rwid="'+ arr[i]["id"] +'" id="rw'+ arr[i]["id"] +'">'+
 						'<div class="outer1 first liu"><div  class="outer1 second liu" ><div class="outer1 third liu" >'+
-							'<div class="inner1" style="background-image:url('+ arr[i]["imgurl"] +')"></div>'+
+							'<div class="inner1" style="background-image:url(./upload/'+ arr[i]["imgurl"] +')"></div>'+
 						'</div></div></div>'+
 						'</div>';
 			$("#people").append(content);
@@ -265,12 +271,16 @@ function yearclick(year){
 		coverhide();
 	} );
 	$(".hexagonrw").live("click",function(){
-		var rmid = $(this).attr("rmid");
-		showrwxq(rmid);
+		var rmid = $(this).attr("id");
+		var rwid = rmid.substr(2);
+		showrwxq(rwid);
 	} );
 	$('#rwxiangqing').bind("click",function(){ 
 		hiderwxq();
 	});
+	$("#return").bind("click",function(){
+		returnlist();
+	})
 	$(".yeartext").live("click",function(){ 
 		var year = $(this).text();
 		yearclick(year);

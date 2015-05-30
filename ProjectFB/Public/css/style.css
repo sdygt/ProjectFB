@@ -186,7 +186,7 @@ visibility: visible;
 .rwname{
 	position: relative;
 	text-align:center;
-	top: -45px;
+	top: 150px;
 	color: #ffffff;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-size: 26px;
@@ -199,4 +199,22 @@ visibility: visible;
 	font-size: 17px;
 	width: 320px;
 	top: 20px;
+	word-wrap: break-word;
+}
+#return{
+	width:65px;
+	height: 65px;
+	position: absolute;
+	top: 946px;
+	left: 23px;
+	opacity:0.5;
+}
+#return:hover{
+	width:65px;
+	height: 65px;
+	position: absolute;
+	top: 946px;
+	left: 23px;
+	cursor: pointer;
+	opacity: 1;
 }
