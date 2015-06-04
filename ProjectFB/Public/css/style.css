@@ -222,6 +222,8 @@ text-shadow:1px 1px 1px #999999;
 	width: 320px;
 	top: 30px;
 	word-wrap: break-word;
+	text-indent:2em;
+	line-height: 30px;
 }
 #return{
 	width:65px;
