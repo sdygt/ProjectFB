@@ -152,7 +152,6 @@ function showrwxq(rwid){
 		$("#rwxiangqing .inner2").css("background-image",'url("'+back.imgurl+'")');
 		$("#hexagonrw").empty();
 		$("#hexagonrw").append('<div class="outer3 first liu" ><div  class="outer3 second liu" ><div class="outer3 third liu" ><div class="inner2" style="background-image:url(./upload/'+ arr["imgurl"] +')"></div></div></div></div><div class="rwintro">'+arr["introduce"]+'</div><div class="rwname">'+arr["name"]+'</div>');
-		//还要将姓名和简介插入其中，另外写样式
 	});
 }
 function hiderwxq(){
@@ -220,12 +219,13 @@ function listshow(bmid){
 			if (j % 2 === 0) {
 				t = 0;
 			};
-			$("#rw"+i).css({
+			$("#rw"+arr[i]["id"]).css({
 				"top" : "+=" +(line * 220 + t * 110) + "px",
 				"left" : "+=" + (190 * j) + "px"
 			});
 		};
 	});
+
 	$.get('./admin.php/Ajax/ajax?department=' + bmid ,function(back){
 		var arr = back;
 		$("#rwkuang").empty();
@@ -257,7 +257,7 @@ function yearclick(year){
 			if (j % 2 === 0) {
 				t = 0;
 			};
-			$("#rw"+i).css({
+			$("#rw"+arr[i]["id"]).css({
 				"top" : "+=" +(line * 220 + t * 110) + "px",
 				"left" : "+=" + (190 * j) + "px"
 			});
