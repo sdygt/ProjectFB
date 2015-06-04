@@ -26,21 +26,18 @@ class IndexAction extends Action
 			$this->error('非法操作！',U('Index/index'));
 		}
 
-		$data = M('account');
-		$password = $data->where('name="'.I('POST.name').'"')->getField('password');
+		$password = M('account')->where('name="'.I('POST.name').'"')->getField('password');
 		
-		if ((password_verify(I('POST.password'),$password)))//need PHP 5.5+
+		if (!(password_verify(I('POST.password'),$password))||strpos($password, '$2y$10$')===FALSE)//若密码错误或者未能获取有效密码
 		{
-			session('loggeduser',I('POST.name'));
-			//$this->redirect('Index/view');
-			$this->ajaxReturn(array('status' => 0));//success
+			$this->ajaxReturn(array('status' => 1));//bad name or password
 		}
 		else
 		{
-			// $this->error('用户名或密码错误！', U('Index/index'));
-			$this->ajaxReturn(array('status' => 1));//fail
+			session('loggeduser',I('POST.name'));
+			$this->ajaxReturn(array('status' => 0));//success
 		}
-
+		
 	}
 
 	public function logout()

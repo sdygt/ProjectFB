@@ -31,13 +31,18 @@
             if (back.status == 0) {
                 $("#btnLogin").val("正在跳转……");
                 window.location.href="{:U('Index/view')}";
+            }else if(back.status == 1){
+                $("#btnLogin").removeClass("disabled");
+                $("#btnLogin").val("用户名或密码错误");
+                $("#form").addClass("has-error has-feedback");
             }else{
                 $("#btnLogin").removeClass("disabled");
-                $("#btnLogin").val("用户名或密码错误，请重试");
+                $("#btnLogin").val("未知错误，请稍后重试");
                 $("#form").addClass("has-error has-feedback");
             };
         });
     });
+
     </script>
 </body>
 </html>
