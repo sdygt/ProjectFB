@@ -215,12 +215,12 @@ text-shadow:1px 1px 1px #999999;
 }
 .rwintro{
 	position: absolute;
-	left: 230px;
+	left: 248px;
 	color: #ffffff;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-size: 17px;
 	width: 320px;
-	top: 20px;
+	top: 30px;
 	word-wrap: break-word;
 }
 #return{
