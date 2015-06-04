@@ -61,11 +61,11 @@ html,body{
 	height: 535px;
 	background-repeat: no-repeat;
 }
-.hexagon{width: 175px;height: 150px;
+.hexagon{width: 175px;height: 163px;
 	margin: auto;
 	overflow: hidden;
 }
-.hexagonrw{width: 122px;height: 103px;
+.hexagonrw{width: 122px;height: 137px;
 	margin: auto;
 	overflow: hidden;
 
@@ -147,7 +147,7 @@ text-shadow:1px 1px 1px #999999;
 	-o-transform:rotate(-30deg); 	/* Opera */
 }
 .liu{position: absolute;left: 0px;right: 0;top: 0;bottom: 0;margin: auto;}
-#hexagon0{position: absolute;left: 0px;right: 0;top: 0;bottom: 85px;margin: auto;width: 200px;height: 150px;
+#hexagon0{position: absolute;left: 0px;right: 0;top: 0;bottom: 85px;margin: auto;width: 200px;height: 163px;
 	margin: auto;
 	overflow: hidden;}
 #hexagon1{position: absolute;left: 0px;right: 0;top: 0;bottom: -240px;margin: auto;}
