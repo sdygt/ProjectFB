@@ -44,6 +44,7 @@ html,body{
 	height: 200%;
 	position: absolute;
 	display: none;
+
 	}
 	
 #bmlistkuang{
@@ -64,6 +65,7 @@ html,body{
 .hexagon{width: 175px;height: 163px;
 	margin: auto;
 	overflow: hidden;
+
 }
 .hexagonrw{width: 122px;height: 137px;
 	margin: auto;
@@ -74,15 +76,18 @@ html,body{
 	width: 150px;height: 175px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
 	cursor: pointer;
+  background-color: rgba(108,146,180,0.7);
 }
 .outer1{
 	width: 100px;height: 173px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
 	cursor: pointer;
+
 }
 .outer3{
 	width: 128px;height: 323px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
+
 }
 /*三层旋转制作六边形*/
 .first{
@@ -110,7 +115,7 @@ visibility: visible;
 /*内层摆正并放图片*/
 .inner{
 	width: 175px;
-	height: 150px;
+	height: 151px;
 	background-size: cover;
 	position: absolute;
 	left: -14px;
@@ -119,9 +124,10 @@ visibility: visible;
 	margin: auto;
 	text-align:center;
 	line-height: 150px;
-	color:#000000;
+	color:#FFFFFF;
   font-family:"微软雅黑,宋体";font-weight:bold;
   font-size:28px;
+
 
 text-shadow:1px 1px 1px #999999;
 	transform:rotate(-30deg);
@@ -198,15 +204,16 @@ text-shadow:1px 1px 1px #999999;
 }
 .yearlist{cursor: pointer;}
 .rwname{
-	position: relative;
+	position: absolute;
 	text-align:center;
-	top: 150px;
+	top: 185px;
+	left: 60px;
 	color: #ffffff;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-size: 26px;
 }
 .rwintro{
-	position: relative;
+	position: absolute;
 	left: 230px;
 	color: #ffffff;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
@@ -233,10 +240,9 @@ text-shadow:1px 1px 1px #999999;
 	opacity: 1;
 }
 #sast{
-  width: 345px;
-  height: 238px;
+
   position: absolute;
-  left: -85px;
-  top: -38px;
+  left: 13px;
+  top: 25px;
 }
 .bmname{}
