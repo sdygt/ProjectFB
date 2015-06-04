@@ -188,7 +188,7 @@ text-shadow:1px 1px 1px #999999;
 }
 #hexagonrw{
 	position: absolute;
-	left: -421px;
+	left: -450px;
 	right: 0;
 	top: -58px;
 	bottom: 85px;
@@ -205,9 +205,10 @@ text-shadow:1px 1px 1px #999999;
 .yearlist{cursor: pointer;}
 .rwname{
 	position: absolute;
+	width: 202px;
 	text-align:center;
-	top: 185px;
-	left: 60px;
+	top: 160px;
+
 	color: #ffffff;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-size: 26px;
