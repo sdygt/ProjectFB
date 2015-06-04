@@ -213,15 +213,16 @@ function listshow(bmid){
 						'</div></div></div>'+
 						'</div>';
 			$("#people").append(content);
-			line = parseInt(i / 5);
+			line = parseInt(i / 5,10);
 			j = i % 5;
 			var t = 1;
 			if (j % 2 === 0) {
 				t = 0;
 			};
+
 			$("#rw"+arr[i]["id"]).css({
-				"top" : "+=" +(line * 220 + t * 110) + "px",
-				"left" : "+=" + (190 * j) + "px"
+				"top" : (120 + line * 220 + t * 110) + "px",
+				"left" :  (-600 +190 * j) + "px"
 			});
 		};
 	});
@@ -258,8 +259,8 @@ function yearclick(year){
 				t = 0;
 			};
 			$("#rw"+arr[i]["id"]).css({
-				"top" : "+=" +(line * 220 + t * 110) + "px",
-				"left" : "+=" + (190 * j) + "px"
+				"top" : (120 + line * 220 + t * 110) + "px",
+				"left" :  (-600 +190 * j) + "px"
 			});
 		};
 	});
