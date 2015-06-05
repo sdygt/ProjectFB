@@ -79,7 +79,7 @@ html,body{
   background-color: rgba(108,146,180,0.7);
 }
 .outer1{
-	width: 100px;height: 173px;background-color: #FFFFFF;
+	width: 100px;height: 122px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
 	cursor: pointer;
 
@@ -194,7 +194,7 @@ text-shadow:1px 1px 1px #999999;
 	bottom: 85px;
 	margin: auto;
 	width: 200px;
-	height: 150px;
+	height: 322px;
 }
 .yeartext{             
  	font-size:23px;  
@@ -204,26 +204,26 @@ text-shadow:1px 1px 1px #999999;
 }
 .yearlist{cursor: pointer;}
 .rwname{
-	position: absolute;
-	width: 202px;
-	text-align:center;
-	top: 160px;
-
-	color: #ffffff;
-	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-	font-size: 26px;
+  position: absolute;
+  width: 202px;
+  text-align: center;
+  top: 272px;
+  color: #ffffff;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  font-size: 26px;
+  left: 110px;
 }
 .rwintro{
 	position: absolute;
-	left: 248px;
-	color: #ffffff;
-	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-	font-size: 17px;
-	width: 320px;
-	top: 30px;
-	word-wrap: break-word;
-	text-indent:2em;
-	line-height: 30px;
+  left: 355px;
+  color: #ffffff;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  font-size: 17px;
+  width: 320px;
+  top: 134px;
+  word-wrap: break-word;
+  text-indent: 1em;
+  line-height: 30px;
 }
 #return{
 	width:65px;

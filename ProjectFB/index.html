@@ -105,10 +105,10 @@
 				<div class="inner2" style="background-image:url(./Public/img/sast.png)"></div>
 			</div></div>
 			</div>
+			
+			</div>
 			<div class="rwintro">方傅</div>
 			<div class="rwname">方师傅</div>
-			</div>
-
 		</div>
 	</div>
 	</div>
@@ -150,8 +150,8 @@ function showrwxq(rwid){
 		$("#rwxiangqing").css("display","inline");
 		$("#bmlistkuang").css("opacity","0.5");
 		$("#rwxiangqing .inner2").css("background-image",'url("'+back.imgurl+'")');
-		$("#hexagonrw").empty();
-		$("#hexagonrw").append('<div class="outer3 first liu" ><div  class="outer3 second liu" ><div class="outer3 third liu" ><div class="inner2" style="background-image:url(./upload/'+ arr["imgurl"] +')"></div></div></div></div><div class="rwintro">'+arr["introduce"]+'</div><div class="rwname">'+arr["name"]+'</div>');
+		$("#rwxiangqing").empty();
+		$("#rwxiangqing").append('<div  id="hexagonrw"><div class="outer3 first liu" ><div  class="outer3 second liu" ><div class="outer3 third liu" ><div class="inner2" style="background-image:url(./upload/'+ arr["imgurl"] +')"></div></div></div></div></div><div class="rwintro">'+arr["introduce"]+'</div><div class="rwname">'+arr["name"]+'</div>');
 	});
 }
 function hiderwxq(){
