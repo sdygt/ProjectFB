@@ -23,10 +23,10 @@
 		</div>
 		<div id="bmlist">
 			<div id="bmlistkuang">
+			<div id="tmbj" style="background-image:url(./Public/img/list.png)"></div>
 				<div  id="hexagon0">
-				<div class="outer first liu" ><div  class="outer second liu" ><div class="outer third liu" >
+				<div class="outer4 first liu" ><div  class="outer4 second liu" ><div class="outer4 third liu" >
 					<div class="inner" style="background-image:url()">
-						<img id="sast" src="./Public/img/sast1.png">
 					</div>
 				</div></div></div>
 				</div>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="hexagon" id="hexagon7">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" >外联部</div>
+					<div class="inner" style="color:#79a9d8" >外联部</div>
 				</div></div></div>
 				</div>
 				<div class="hexagon" id="hexagon8">
@@ -73,7 +73,7 @@
 				</div>
 				<div class="hexagon" id="hexagon9">
 				<div class="outer first liu" ><div class="outer second liu" ><div class="outer third liu" >
-					<div class="inner" >SAST工作室</div>
+					<div class="inner" style="color:#79a9d8" >SAST工作室</div>
 				</div></div></div>
 				</div>
 
@@ -145,13 +145,12 @@ function showrwxq(rwid){
 	$(".hexagonrw").unbind("click");
 	$.get("./admin.php/Ajax/ajax?member=" + rwid ,function(back){
 		var arr = back;
-		console.log(back); 
 		
 		$("#rwxiangqing").css("display","inline");
 		$("#bmlistkuang").css("opacity","0.5");
 		$("#rwxiangqing .inner2").css("background-image",'url("'+back.imgurl+'")');
 		$("#rwxiangqing").empty();
-		$("#rwxiangqing").append('<div  id="hexagonrw"><div class="outer3 first liu" ><div  class="outer3 second liu" ><div class="outer3 third liu" ><div class="inner2" style="background-image:url(./upload/'+ arr["imgurl"] +')"></div></div></div></div></div><div class="rwintro">'+arr["introduce"]+'</div><div class="rwname">'+arr["name"]+'</div>');
+		$("#rwxiangqing").append('<div  id="hexagonrw"><div class="outer3 first liu" ><div  class="outer3 second liu" ><div class="outer3 third liu" ><div class="inner2" style="background-image:url(./upload/'+ arr["imgurl"] +')"></div></div></div></div></div><div class="rwintro">'+arr["introduce"]+'</div><div class="rwname">'+arr["name"]+'</div>'+'<div  id="hexagonrw"><div class="outer6 first liu" ><div  class="outer6 second liu" ><div class="outer6 third liu" ><div class="inner2" style="background-image:url()"></div></div></div></div></div>');
 	});
 }
 function hiderwxq(){
@@ -209,9 +208,12 @@ function listshow(bmid){
 		for (var i = 0; i < num; i++) {
 			var content = '<div  class="hexagonrw rw" id="rw'+ arr[i]["id"] +'">'+
 						'<div class="outer1 first liu"><div  class="outer1 second liu" ><div class="outer1 third liu" >'+
-							'<div class="inner1" style="background-image:url(./upload/'+ arr[i]["imgurl"] +')"></div>'+
-						'</div></div></div>'+
-						'</div>';
+						'<div class="inner1" style="background-image:url(./upload/'+ arr[i]["imgurl"] +')"></div>'+
+						'</div></div></div></div>'+
+						'<div  class="hexagonrw rw" id="rw1'+ arr[i]["id"] +'">'+
+						'<div class="outer5 first liu"><div  class="outer5 second liu" ><div class="outer5 third liu" >'+
+						'<div class="inner5" style="background-image:url()"></div>'+
+						'</div></div></div></div>';
 			$("#people").append(content);
 			line = parseInt(i / 5,10);
 			j = i % 5;
@@ -221,6 +223,10 @@ function listshow(bmid){
 			};
 
 			$("#rw"+arr[i]["id"]).css({
+				"top" : (120 + line * 220 + t * 110) + "px",
+				"left" :  (-600 +190 * j) + "px"
+			});
+			$("#rw1"+arr[i]["id"]).css({
 				"top" : (120 + line * 220 + t * 110) + "px",
 				"left" :  (-600 +190 * j) + "px"
 			});
@@ -246,11 +252,14 @@ function yearclick(year){
 		var num = arr.length;
 		$("#people").empty();
 		for (var i = 0; i < num; i++) {
-			var content = '<div  class="hexagonrw rw" rwid="'+ arr[i]["id"] +'" id="rw'+ arr[i]["id"] +'">'+
+			var content = '<div  class="hexagonrw rw" id="rw'+ arr[i]["id"] +'">'+
 						'<div class="outer1 first liu"><div  class="outer1 second liu" ><div class="outer1 third liu" >'+
-							'<div class="inner1" style="background-image:url(./upload/'+ arr[i]["imgurl"] +')"></div>'+
-						'</div></div></div>'+
-						'</div>';
+						'<div class="inner1" style="background-image:url(./upload/'+ arr[i]["imgurl"] +')"></div>'+
+						'</div></div></div></div>'+
+						'<div  class="hexagonrw rw" id="rw1'+ arr[i]["id"] +'">'+
+						'<div class="outer5 first liu"><div  class="outer5 second liu" ><div class="outer5 third liu" >'+
+						'<div class="inner5" style="background-image:url()"></div>'+
+						'</div></div></div></div>';
 			$("#people").append(content);
 			line = parseInt(i / 5);
 			j = i % 5;
@@ -262,6 +271,10 @@ function yearclick(year){
 				"top" : (120 + line * 220 + t * 110) + "px",
 				"left" :  (-600 +190 * j) + "px"
 			});
+			$("#rw1"+arr[i]["id"]).css({
+				"top" : (120 + line * 220 + t * 110) + "px",
+				"left" :  (-600 +190 * j) + "px"
+				});
 		};
 	});
 }
@@ -279,12 +292,17 @@ function yearclick(year){
 		var rwid = rmid.substr(2);
 		showrwxq(rwid);
 	} );
-	$('#rwxiangqing').bind("click",function(){ 
+	$('body').bind("click",function(){ 
 		hiderwxq();
+	});
+	$(function() {
+		$("#rwxiangqing").click(function(event) {
+			return false;
+		});
 	});
 	$("#return").bind("click",function(){
 		returnlist();
-	})
+	});
 	$(".yeartext").live("click",function(){ 
 		var year = $(this).text();
 		yearclick(year);

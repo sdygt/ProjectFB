@@ -33,7 +33,7 @@ html,body{
 	}
 #neikuang{
 	width: 869px;
-	height: 511px;
+	height: 517px;
 	overflow: hidden;
 	position: absolute;
 	margin: 40px 35px 35px 35px;
@@ -62,7 +62,7 @@ html,body{
 	height: 535px;
 	background-repeat: no-repeat;
 }
-.hexagon{width: 175px;height: 163px;
+.hexagon{width: 175px;height: 175px;
 	margin: auto;
 	overflow: hidden;
 
@@ -76,16 +76,36 @@ html,body{
 	width: 150px;height: 175px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
 	cursor: pointer;
-  background-color: rgba(108,146,180,0.7);
+  background-color: rgba(108,146,180,0);
 }
-.outer1{
-	width: 100px;height: 122px;background-color: #FFFFFF;
+.outer4{
+	width: 150px;height: 175px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
 	cursor: pointer;
-
+  background-color: rgba(108,146,180,0);
+}
+.outer:hover{
+	background-color: rgba(180,180,200,0.25);
+}
+.outer1{
+	width: 95px;height: 119px;background-color: #FFFFFF;
+	overflow: hidden;visibility: hidden;
+	cursor: pointer;
+	z-index: 1;
 }
 .outer3{
 	width: 128px;height: 323px;background-color: #FFFFFF;
+	overflow: hidden;visibility: hidden;
+  z-index: 3;
+}
+.outer6{
+	width: 137px;height: 323px;background-color: #FFFFFF;
+	overflow: hidden;visibility: hidden;
+  
+}
+.outer5{
+
+	width: 106px;height: 127px;background-color: #FFFFFF;
 	overflow: hidden;visibility: hidden;
 
 }
@@ -112,24 +132,24 @@ html,body{
 	-o-transform:rotate(60deg); 	/* Opera */
 visibility: visible;
 }
+
 /*内层摆正并放图片*/
 .inner{
-	width: 175px;
-	height: 151px;
-	background-size: cover;
-	position: absolute;
-	left: -14px;
-	top: 2px;
-	bottom: 0;
-	margin: auto;
-	text-align:center;
-	line-height: 150px;
-	color:#FFFFFF;
-  font-family:"微软雅黑,宋体";font-weight:bold;
-  font-size:28px;
+  width: 171px;
+  height: 148px;
+  /* background-size: cover; */
+  position: absolute;
+  left: -11px;
+  top: 13px;
+  bottom: 0;
+  /* margin: auto; */
+  text-align: center;
+  line-height: 148px;
+  color: #b8f1ff;
+  font-family: "微软雅黑","宋体";
+  font-size: 26px;
 
 
-text-shadow:1px 1px 1px #999999;
 	transform:rotate(-30deg);
 	-ms-transform:rotate(-30deg); 	/* IE 9 */
 	-moz-transform:rotate(-30deg); 	/* Firefox */
@@ -152,19 +172,19 @@ text-shadow:1px 1px 1px #999999;
 	-webkit-transform:rotate(-30deg); /* Safari 和 Chrome */
 	-o-transform:rotate(-30deg); 	/* Opera */
 }
-.liu{position: absolute;left: 0px;right: 0;top: 0;bottom: 0;margin: auto;}
-#hexagon0{position: absolute;left: 0px;right: 0;top: 0;bottom: 85px;margin: auto;width: 200px;height: 163px;
+.liu{position: absolute;left: 0px;right: 0;top: 0px;bottom: 0;margin: auto;}
+#hexagon0{position: absolute;left: 9px;right: 0;top: 0;bottom: 85px;margin: auto;width: 200px;height: 163px;
 	margin: auto;
 	overflow: hidden;}
-#hexagon1{position: absolute;left: 0px;right: 0;top: 0;bottom: -240px;margin: auto;}
-#hexagon2{position: absolute;left: 558px;right: 0;top: 0;bottom: 85px;margin: auto;}
-#hexagon3{position: absolute;left: -558px;right: 0;top: 0;bottom: 85px;margin: auto;}
-#hexagon4{position: absolute;left: -558px;right: 0;top: 0;bottom: -240px;margin: auto;}
-#hexagon5{position: absolute;left: -279px;right: 0;top: 78px;bottom: 0;margin: auto;}
-#hexagon6{position: absolute;left: 558px;right: 0;top: 0;bottom: -240px;margin: auto;}
-#hexagon7{position: absolute;left: -279px;right: 0;top: 0;bottom: 246px;margin: auto;}
-#hexagon8{position: absolute;left: 279px;right: 0;top: 78px;bottom: 0;margin: auto;}
-#hexagon9{position: absolute;left: 279px;right: 0;top: 0;bottom: 246px;margin: auto;}
+#hexagon1{position: absolute;left: 8px;right: 0;top: 44px;bottom: -240px;margin: auto;}
+#hexagon2{position: absolute;left: 634px;right: 0;top: 4px;bottom: 85px;margin: auto;}
+#hexagon3{position: absolute;left: -624px;right: 0;top: -7px;bottom: 85px;margin: auto;}
+#hexagon4{position: absolute;left: -624px;right: 0;top: 38px;bottom: -240px;margin: auto;}
+#hexagon5{position: absolute;left: -306px;right: 0;top: 92px;bottom: 0;margin: auto;}
+#hexagon6{position: absolute;left: 644px;right: 0;top: 36px;bottom: -240px;margin: auto;}
+#hexagon7{position: absolute;left: -301px;right: 0;top:-19px;bottom: 246px;margin: auto;}
+#hexagon8{position: absolute;left: 324px;right: 0;top: 96px;bottom: 0;margin: auto;}
+#hexagon9{position: absolute;left: 321px;right: 0;top: -20px;bottom: 246px;margin: auto;}
 #rwfy1{position: absolute;top: 70px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
 #rwfy2{position: absolute;top: 125px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
 #rwfy3{position: absolute;top: 180px;right: 745px;width: 134px;height: 50px;line-height: 55px;text-align:center;}
@@ -175,7 +195,7 @@ text-shadow:1px 1px 1px #999999;
 
 #rwxiangqing{
 	width: 869px;
-	height: 511px;
+	height: 517px;
 	overflow: hidden;
 	position: absolute;
 	margin: 40px 35px 35px 35px;
@@ -185,6 +205,7 @@ text-shadow:1px 1px 1px #999999;
   top: 471px;
   right: -40px;
   display: none;
+  z-index: 2;
 }
 #hexagonrw{
 	position: absolute;
@@ -248,4 +269,10 @@ text-shadow:1px 1px 1px #999999;
   left: 13px;
   top: 25px;
 }
-.bmname{}
+#tmbj{
+	position: absolute;
+  top: 33px;
+  left: 22px;
+  width: 838px;
+  height: 451px;
+}
